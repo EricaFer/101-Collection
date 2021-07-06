@@ -30,6 +30,27 @@
 * [EXPLAIN PLAN](#EXPLAIN-PLAN)
 * [LOCK TABLE](#LOCK-TABLE)
 
+## ADD-ONS
+
+### AGGREGATE FUNCTIONS
+
+* AVG
+* COUNT
+* MIN
+* MAX
+* SUM
+
+### COMMENTING
+
+```-- Single line comment```
+
+``` 
+    /*
+      Multi line comments
+      nice
+     */
+```
+
 <br>
 
 # DQL
@@ -74,11 +95,11 @@
   
   - Concatenates 2  columns with a space in the middle
 
-    ```SELECTS CONCAT(col1,' ',col2) FROM  TABLE```
+    ```SELECT CONCAT(col1,' ',col2) FROM  TABLE```
     
-   - Concatenates 2  columns with a space in the middle, renaming the new column
+  - Concatenates 2  columns with a space in the middle, renaming the new column
 
-    ```SELECTS CONCAT(col1,' ',col2) AS "new name" FROM  TABLE```
+    ```SELECT CONCAT(col1,' ',col2) AS "new name" FROM  TABLE```
   
   ### INSERT
   ### UPDATE
@@ -87,3 +108,5 @@
   ### CALL
   ### EXPLAIN-PLAN
   ### LOCK-TABLE
+  
+
