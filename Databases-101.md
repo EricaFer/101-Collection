@@ -1,33 +1,36 @@
 
 # DATABASES 101
 
-<br>
 
-### DQL - Data Query Language
+### [DQL - Data Query Language](#DQL)
 
 * [SELECT](#SELECT)
 
-### DDL - Data Definition Language
+[### DDL - Data Definition Language](#DDL)
 
-* CREATE
-* ALTER
-* DROP
-* RENAME
-* TRUNCATE
+* [CREATE](#CREATE)
+* [ALTER](#ALTER)
+* [DROP](#DROP)
+* [RENAME](#RENAME)
+* [TRUNCATE](#TRUNCATE)
 
-### DCL - Data Control Language
+[### DCL - Data Control Language](#DCL)
 
-* GRANT
-* REVOKE
+* [GRANT](#GRANT)
+* [REVOKE](#REVOKE)
 
-### DML - Data Modification Language
+### [DML - Data Modification Language](#DML)
 
-* INSERT
-* UPDATE
-* DELETE
-* MERGE
-* CALL
-* EXPLAIN PLAN
-* LOCK TABLE
+* [INSERT](#INSERT)
+* [UPDATE](#UPDATE)
+* [DELETE](#DELETE)
+* [MERGE](#MERGE)
+* [CALL](#CALL)
+* [EXPLAIN PLAN](#EXPLAIN-PLAN)
+* [LOCK TABLE](#LOCK-TABLE)
 
-### SELECT
+<br>
+
+# DQL
+
+## SELECT
