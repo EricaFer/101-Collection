@@ -30,26 +30,15 @@
 * [EXPLAIN PLAN](#EXPLAIN-PLAN)
 * [LOCK TABLE](#LOCK-TABLE)
 
-## ADD-ONS
+## [ADD-ONS](#ADD-ONS)
 
-### AGGREGATE FUNCTIONS
+### [AGGREGATE FUNCTIONS](#AGGREGATE-FUNCTIONS)
 
-* AVG
-* COUNT
-* MIN
-* MAX
-* SUM
+### [COMMENTING](#COMMENTING)
 
-### COMMENTING
+### [BOOLEAN](#BOOLEAN)
 
-```-- Single line comment```
-
-``` 
-    /*
-      Multi line comments
-      nice
-     */
-```
+### [OPERATOR PRECEDENCE](#OPERATOR-PRECEDENCE)
 
 <br>
 
@@ -109,4 +98,95 @@
   ### EXPLAIN-PLAN
   ### LOCK-TABLE
   
+  <br>
+  
+# DQL
+
+ ### SELECT
+
+- Selects all info from table
+
+  ```SELECT * FROM employees;```
+  
+<br>
+
+# ADD-ONS
+
+### AGGREGATE-FUNCTIONS
+
+* AVG
+* COUNT
+* MIN
+* MAX
+* SUM
+
+### COMMENTING
+
+```-- Single line comment```
+
+``` 
+    /*
+      Multi line comments
+      nice
+     */
+```
+
+### BOOLEANS
+
+ * AND
+ 
+  ```
+  SELECT column FROM table
+  WHERE col1 = 'data' AND co2 = 'data'
+  ```
+ 
+ * OR
+ 
+  ```
+  SELECT column FROM table
+  WHERE col1 = 'data' OR co2 = 'data'
+  ```
+  
+  * NOT
+
+   ```
+   SELECT firstName, gender FROM users
+   WHERE NOT gender = 'm';
+   ``` 
+  
+  * MORE ADVANCED EXAMPLES
+  
+  - AND & OR
+  
+    ```
+    SELECT first_name, last_name, hire_date FROM employees
+    WHERE (first_name = 'Georgi' AND last_name = 'Facello' AND hire_date = '1986-06-26')
+    OR (first_name = 'Bezalel' AND last_name = 'Simmel')
+    ```
+    
+### OPERATOR PRECEDENCE
+ 
+ Always remember the following: HIGHEST to LOWEST
+
+
+
+1. Parenthesis
+
+2. Arithmetic Operators
+
+3. Concatenation Operators
+
+4. Comparison Conditions
+
+5. IS NULL, LIKE, NOT IN, etc.
+
+6. NOT
+
+7. AND
+
+8. OR
+
+<br>
+
+
 
