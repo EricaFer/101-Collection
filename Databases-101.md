@@ -1,5 +1,5 @@
 
-# DATABASES 101
+# SQL 101
 
 
 ### [DQL - Data Query Language](#DQL)
