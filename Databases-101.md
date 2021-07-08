@@ -30,6 +30,7 @@
 * [EXPLAIN PLAN](#EXPLAIN-PLAN)
 * [LOCK TABLE](#LOCK-TABLE)
 * [COALESCE](#COALESCE)
+* [CAST](#CAST)
 
 ### [ADD-ONS](#ADD-ONS)
 
@@ -42,6 +43,11 @@
 * [OPERATOR PRECEDENCE](#OPERATOR-PRECEDENCE)
 
 * [EMPTY VALUES](#EMPTY-VALUES)
+
+* [PATTERN MATCHING](#PATTERN-MATCHING)
+
+* [DATES AND TIMEZONES](#DATES AND TIMEZONES)
+
 
 <br>
 
@@ -100,11 +106,20 @@
   ### CALL
   ### EXPLAIN-PLAN
   ### LOCK-TABLE
+  
   ### COALESCE
   
   - Substitutes NULL values
 
     ```SELECT coalesce(col1, 'new_value') FROM table```
+    
+  ### CAST
+  
+  - To use Pattern Matching in PostGres characthers need to be cast as TEXT
+
+    ```CAST col AS text LIKE```
+    
+    ```col::text LIKE```
   
   <br>
   
@@ -168,6 +183,13 @@
     SELECT firstName, gender FROM users
     WHERE age BETWEEN 30 AND 50;
     ``` 
+    
+  * IN
+
+    ```
+    SELECT * FROM table
+    WHERE col IN (val1, val2);
+    ``` 
   
   * MORE ADVANCED EXAMPLES
   
@@ -221,3 +243,26 @@
       WHERE field = '' IS [NOT] TRUE
       ```    
 
+### PATTERN MATCHING
+
+  * PARTIAL MATCHING
+
+    - LIKE (case-sensitive)
+    - ILIKE (NOT case-sensitive)
+
+  * '%2' - Ends with 2
+  * '%2%' - 2 anywhere in the middle
+  * '_00%' - 00 after the first characther
+  * '2_%_%' - Starts with 2 and has at least 3 digits
+  * '2___3' - five-digit number that starts with 2 and end with 3
+
+### DATES AND TIMEZONES
+
+   ````SHOW TIMEZONE```
+   
+   - Only changes the session
+   ```SET TIME ZONE 'UTC'```
+   
+   - Permanently changes the TIME ZONE
+
+    ```ALTER USER postgres SET timezone='UTC'```
