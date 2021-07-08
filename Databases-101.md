@@ -29,16 +29,19 @@
 * [CALL](#CALL)
 * [EXPLAIN PLAN](#EXPLAIN-PLAN)
 * [LOCK TABLE](#LOCK-TABLE)
+* [COALESCE](#COALESCE)
 
-## [ADD-ONS](#ADD-ONS)
+### [ADD-ONS](#ADD-ONS)
 
-### [AGGREGATE FUNCTIONS](#AGGREGATE-FUNCTIONS)
+* [AGGREGATE FUNCTIONS](#AGGREGATE-FUNCTIONS)
 
-### [COMMENTING](#COMMENTING)
+* [COMMENTING](#COMMENTING)
 
-### [BOOLEAN](#BOOLEAN)
+* [BOOLEAN](#BOOLEAN)
 
-### [OPERATOR PRECEDENCE](#OPERATOR-PRECEDENCE)
+* [OPERATOR PRECEDENCE](#OPERATOR-PRECEDENCE)
+
+* [EMPTY VALUES](#EMPTY-VALUES)
 
 <br>
 
@@ -97,6 +100,11 @@
   ### CALL
   ### EXPLAIN-PLAN
   ### LOCK-TABLE
+  ### COALESCE
+  
+  - Substitutes NULL values
+
+    ```SELECT coalesce(col1, 'new_value') FROM table```
   
   <br>
   
@@ -153,10 +161,17 @@
    SELECT firstName, gender FROM users
    WHERE NOT gender = 'm';
    ``` 
+   
+  * BETWEEN AND
+
+    ```
+    SELECT firstName, gender FROM users
+    WHERE age BETWEEN 30 AND 50;
+    ``` 
   
   * MORE ADVANCED EXAMPLES
   
-  - AND & OR
+    - AND
   
   ```
   SELECT first_name, last_name, hire_date FROM employees
@@ -188,5 +203,21 @@
 
 <br>
 
+### EMPTY VALUES
 
+  * FILTER 
+
+    - NULL
+  
+      ```
+      SELECT * FROM table
+      WHERE field IS [NOT] NULL
+      ```
+      
+    - EMPTY
+
+      ```
+      SELECT * FROM table
+      WHERE field = '' IS [NOT] TRUE
+      ```    
 
